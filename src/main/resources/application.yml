@@ -1,0 +1,22 @@
+url-shortener:
+  short-code-length: 10
+  # The base URL of every shortened URL. It must end without the trailing slash.
+  base-url: http://url-shortener.getflip.io
+
+spring:
+  sql:
+    init:
+      # Ensures the scripts are always executed
+      mode: always
+  jpa:
+    # Run scripts before Hibernate starts
+    defer-datasource-initialization: false
+    # Hiberante only validates, it doesnt create tables
+    hibernate.ddl-auto: validate
+
+springdoc:
+  packagesToScan: io.geflip.urlshortener.infrastructure.adapters.in.controllers
+  swagger-ui:
+    path: /swagger-ui
+    doc-expansion: none
+  default-produces-media-type: application/json

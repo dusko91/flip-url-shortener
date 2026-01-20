@@ -1,0 +1,11 @@
+url-shortener:
+  base-url: http://url-shortener.getflip.io/
+
+# Database Connection Settings
+spring.datasource.url: jdbc:postgresql://localhost:5432/flip-url-shortener
+spring.datasource.username: admin
+spring.datasource.password: admin
+spring.datasource.driver-class-name: org.postgresql.Driver
+
+# JPA / Hibernate Settings
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
