@@ -8,7 +8,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 import io.geflip.urlshortener.infrastructure.adapters.in.controllers.dto.ShortUrlRequest;
+import io.geflip.urlshortener.infrastructure.adapters.out.persistence.JpaShortenedUrlRepository;
 import java.net.URI;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,13 @@ class UrlShortenExpandWorkflowIT {
   @Autowired private MockMvc mockMvc;
 
   @Autowired private ObjectMapper objectMapper;
+
+  @Autowired private JpaShortenedUrlRepository repository;
+
+  @BeforeEach
+  void setUp() {
+    repository.deleteAll();
+  }
 
   @Test
   @DisplayName("Shorten a URL and then Expand it")
