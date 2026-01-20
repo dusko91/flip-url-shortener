@@ -8,11 +8,11 @@ import io.geflip.urlshortener.domain.ports.in.url.UrlShortenerPort;
 import io.geflip.urlshortener.domain.ports.out.persistence.ShortenedUrlRepositoryPort;
 import io.geflip.urlshortener.infrastructure.adapters.out.generator.RandomShortCodeGenerator;
 import io.geflip.urlshortener.infrastructure.configuration.UrlShortenerProperties;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UrlShortenerService implements UrlShortenerPort {
 
   private final UrlShortenerProperties urlShortenerProperties;

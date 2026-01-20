@@ -1,10 +1,10 @@
 package io.geflip.urlshortener.infrastructure.adapters.in.controllers.exception;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 public enum ErrorResponses {
   UNEXPECTED_ERROR(

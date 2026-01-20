@@ -4,10 +4,10 @@ import io.geflip.urlshortener.domain.model.value.ShortCode;
 import io.geflip.urlshortener.domain.ports.out.generator.ShortCodeGeneratorPort;
 import io.geflip.urlshortener.infrastructure.configuration.UrlShortenerProperties;
 import io.geflip.urlshortener.infrastructure.util.Base62RandomGenerator;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Component
 public class RandomShortCodeGenerator implements ShortCodeGeneratorPort {
 

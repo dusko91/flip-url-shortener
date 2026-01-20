@@ -6,11 +6,11 @@ import io.geflip.urlshortener.domain.model.value.ShortCode;
 import io.geflip.urlshortener.domain.ports.out.persistence.ShortenedUrlRepositoryPort;
 import io.geflip.urlshortener.infrastructure.adapters.out.persistence.entity.ShortenedUrlEntity;
 import java.util.Optional;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ShortenedUrlRepository implements ShortenedUrlRepositoryPort {
   private final JpaShortenedUrlRepository jpaRepository;
 

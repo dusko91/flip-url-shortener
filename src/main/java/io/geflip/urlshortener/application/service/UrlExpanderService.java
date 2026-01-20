@@ -7,11 +7,11 @@ import io.geflip.urlshortener.domain.model.value.ShortUrl;
 import io.geflip.urlshortener.domain.ports.in.url.UrlExpanderPort;
 import io.geflip.urlshortener.domain.ports.out.persistence.ShortenedUrlRepositoryPort;
 import java.util.Optional;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UrlExpanderService implements UrlExpanderPort {
 
   private final ShortenedUrlRepositoryPort urlRepository;

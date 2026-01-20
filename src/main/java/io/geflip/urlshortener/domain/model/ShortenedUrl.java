@@ -6,7 +6,7 @@ import lombok.*;
 
 @Builder
 @Data
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ShortenedUrl {
   private final ShortCode shortCode;
   private final OriginalUrl originalUrl;
