@@ -31,7 +31,12 @@ public class UrlShortenerService implements UrlShortenerPort {
   }
 
   private ShortCode createNewShortCode(final OriginalUrl originalUrl) {
-    final ShortenedUrl newShortenedUrl = new ShortenedUrl(createNewRandomShortCode(), originalUrl);
+    final ShortenedUrl newShortenedUrl =
+        ShortenedUrl.builder()
+            .shortCode(createNewRandomShortCode())
+            .originalUrl(originalUrl)
+            .build();
+
     urlRepository.save(newShortenedUrl);
     return newShortenedUrl.getShortCode();
   }

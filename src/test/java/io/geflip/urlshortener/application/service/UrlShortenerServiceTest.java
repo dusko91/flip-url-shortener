@@ -38,7 +38,7 @@ class UrlShortenerServiceTest {
   @DisplayName("Should return original URL when short URL exists")
   void testShortenUrl_existingUrl() {
     // given
-    ShortenedUrl existingEntry = new ShortenedUrl(EXISTING_CODE, ORIGINAL_URL);
+    ShortenedUrl existingEntry = new ShortenedUrl(null, EXISTING_CODE, ORIGINAL_URL);
     when(properties.getBaseUrl()).thenReturn(BASE_URL);
     when(urlRepository.findByOriginalUrl(ORIGINAL_URL)).thenReturn(Optional.of(existingEntry));
 

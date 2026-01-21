@@ -8,6 +8,7 @@ import lombok.*;
 @Data
 @RequiredArgsConstructor
 public class ShortenedUrl {
+  private final Long id;
   private final ShortCode shortCode;
   private final OriginalUrl originalUrl;
 }

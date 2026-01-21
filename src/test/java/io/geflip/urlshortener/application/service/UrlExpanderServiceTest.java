@@ -35,7 +35,7 @@ class UrlExpanderServiceTest {
     OriginalUrl expectedOriginal = OriginalUrl.of("https://example.com");
 
     when(repository.findByShortCode(expectedCode))
-        .thenReturn(Optional.of(new ShortenedUrl(expectedCode, expectedOriginal)));
+        .thenReturn(Optional.of(new ShortenedUrl(null, expectedCode, expectedOriginal)));
 
     // when
     Optional<OriginalUrl> result = service.getOriginalUrl(ShortUrl.of(shortUrlValue));

@@ -38,6 +38,7 @@ public class ShortenedUrlRepository implements ShortenedUrlRepositoryPort {
     return ShortenedUrl.builder()
         .originalUrl(new OriginalUrl(entity.getOriginalUrl()))
         .shortCode(new ShortCode(entity.getShortCode()))
+        .id(entity.getId())
         .build();
   }
 }
